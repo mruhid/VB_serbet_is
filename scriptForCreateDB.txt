@@ -1,0 +1,48 @@
+create table mehsullar (
+    mehsul_id int auto_increment primary key,
+    ad varchar(255),
+    kateqoriya varchar(100),
+    qiymet decimal(10,2),
+    istehsalci varchar(255),
+    barkod varchar(50)
+);
+
+create table isciler (
+    isci_id int auto_increment primary key,
+    ad varchar(255),
+    soyad varchar(255),
+    vezife varchar(100),
+    maas decimal(10,2),
+    filial_id int
+);
+
+create table satilan_mallar (
+    satis_id int auto_increment primary key,
+    mehsul_id int,
+    miqdar int,
+    umumi_qiymet decimal(10,2),
+    isci_id int,
+    tarix datetime
+);
+
+create table cek (
+    cek_id int auto_increment primary key,
+    satis_id int,
+    cemi_qiymet decimal(10,2),
+    odemis_novu enum('nagd', 'kart'),
+    tarix datetime
+);
+
+create table stok (
+    stok_id int auto_increment primary key,
+    mehsul_id int,
+    miqdar int,
+    son_yenilenme_tarixi datetime
+);
+create table filial (
+    filial_id int auto_increment primary key,
+    ad varchar(255),
+    unvan varchar(255),
+    telefon varchar(50),
+    email varchar(100)
+);
