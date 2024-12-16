@@ -1,0 +1,35 @@
+insert into mehsullar (ad, kateqoriya, qiymet, istehsalci, barkod) values
+('çörək', 'ərzaq', 1.50, 'baku bread', '123456789012'),
+('süd', 'ərzaq', 2.00, 'azərsüd', '987654321098'),
+('şokolad', 'şirniyyat', 3.50, 'milla', '123987654321'),
+('yağ', 'ərzaq', 5.00, 'azəryağ', '567890123456');
+
+insert into isciler (ad, soyad, vezife, maas, filial_id) values
+('elvin', 'hüseynov', 'kassir', 500.00, 1),
+('leyla', 'əliyeva', 'menecer', 700.00, 2),
+('orxan', 'məhəmmədov', 'anbar işçisi', 400.00, 1),
+('nigar', 'ibrahimova', 'satıcı', 450.00, 3);
+
+insert into satilan_mallar (mehsul_id, miqdar, umumi_qiymet, isci_id, tarix) values
+(1, 3, 4.50, 1, '2024-12-15 10:30:00'),
+(2, 2, 4.00, 2, '2024-12-15 11:00:00'),
+(3, 1, 3.50, 3, '2024-12-15 11:30:00'),
+(4, 5, 25.00, 4, '2024-12-15 12:00:00');
+
+insert into cek (satis_id, cemi_qiymet, odemis_novu, tarix) values
+(1, 4.50, 'nagd', '2024-12-15 10:30:00'),
+(2, 4.00, 'kart', '2024-12-15 11:00:00'),
+(3, 3.50, 'nagd', '2024-12-15 11:30:00'),
+(4, 25.00, 'kart', '2024-12-15 12:00:00');
+
+insert into stok (mehsul_id, miqdar, son_yenilenme_tarixi) values
+(1, 50, '2024-12-14 18:00:00'),
+(2, 100, '2024-12-14 18:30:00'),
+(3, 30, '2024-12-14 19:00:00'),
+(4, 20, '2024-12-14 19:30:00');
+
+insert into filial (ad, unvan, telefon, email) values
+('nərimanov filialı', 'nərimanov küçəsi 25', '0501234567', 'narimanov@market.az'),
+('binə filialı', 'binə qəsəbəsi 12', '0517654321', 'bine@market.az'),
+('gənclik filialı', 'gənclik prospekti 10', '0558765432', 'genclik@market.az'),
+('sumqayıt filialı', 'sumqayıt şəhəri 3-cü mkr', '0709876543', 'sumqayit@market.az');
